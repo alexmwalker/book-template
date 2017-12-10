@@ -1,0 +1,13 @@
+
+
+.chapter
+  .ch-head Chapter
+  |     
+  h1(id=$.chaptertitle.replace(/\s/g,'').toLowerCase() class="chaptertitle") 
+    | #{$.chaptertitle}
+  |     
+  h3.author #{$.chapterauthor}
+  |
+  != html
+
+
