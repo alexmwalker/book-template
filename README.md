@@ -7,3 +7,4 @@ This repo contains the core SitePoint book template files. Each book prokect sho
 The process used is documented here: [https://www.gitbook.com/book/alexmwalker/the-md-to-pdf-book-generator/details](https://www.gitbook.com/book/alexmwalker/the-md-to-pdf-book-generator/details)
 
 
+
