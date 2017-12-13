@@ -1,0 +1,30 @@
+.spine-wrapper{
+  height: $spine-width;
+  width: $page-height;
+  position: relative;
+  left:0;
+  line-height: $spine-width;
+  margin: -1.5rem 0;
+  transform-origin: bottom left;
+  transform: rotate(90deg);
+  z-index: 999;
+  #spine-logo{
+    width: 12.25rem;
+    float: left;
+    height: $spine-width;
+    }
+  .subject{
+    @include center-dark;
+    font-size: 1.1rem;
+    float: left;
+    width: 20%;
+    position: relative;
+  }
+  .spine-title{
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    width: 40%;
+    float: left;
+  }
+}

@@ -1,0 +1,27 @@
+
+
+/* GRID  -- uncomment for typography/layout tuning */
+
+body {
+     position: relative;
+ }
+ body:active:after {
+     display: none;
+ }
+
+ body:after {
+     background: linear-gradient(to bottom, rgba(200, 225, 255, 0.2) 1px, transparent 1px);
+     background-size: $base-line-height/2 $base-line-height/2;
+     bottom: 0;
+     margin-top: 0px;
+     content: '';
+     display: block;
+     height: 200rem;
+     left: 0;
+     pointer-events: none;
+     position: absolute;
+     right: 0;
+     top: 0;
+     width: auto;
+     z-index: 9999;
+ }

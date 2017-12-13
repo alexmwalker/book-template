@@ -6,6 +6,8 @@ head
   |   
   meta(name='author', content='SitePoint')
   |   
+  meta(name="description", content=$.booktitleClean)
+  |
   link(rel='stylesheet', href='../assets/css/cover.css')
   style.
       html {
@@ -54,6 +56,76 @@ head
 body
   #bookcover.container
     .row
+      .column.page.back
+        .toptag
+          | Supporting files available for Download
+        .backpitch
+          | !{$.backpitch}
+        .backtext !{html}
+          |                 
+          img(src='../images/SVG/map.svg', )
+        |               
+        .author-box
+          h4 Our Authors
+          |                 
+          .author-profile
+            img(src='../images/crew.jpg', alt='The Crew')
+          p
+            | Each SitePoint Anthology is a carefully curated collection of the best SitePoint writing around a chosen topic. That means you can be sure each chapter industry relevant, up-to-date and written by a world expert in their field.
+          p We know you&rsquo;ll enjoy every page.
+        .infobox
+          .points
+            h4 SitePoint Books
+            |                   
+            ul
+              li
+                | Advocate 
+                strong best practice
+                |  techniques
+              |                     
+              li
+                | Lead you through 
+                strong practical examples
+              |                     
+              li
+                | Provide 
+                strong working code
+                |  for your website
+              |                     
+              li
+                | Make learning 
+                strong easy
+                |  and 
+                strong fun
+          |                 
+          .bookID
+            h5 Web Development
+            |                     
+            .barcode
+              // no barcode here
+            |                     
+            .prices
+              span.usd USD $29.95
+              span.cad CAD $39.95
+        |  
+        |                 
+        p.small
+          | Visit us on the Web at sitepoint.com or for sales and support email books@sitepoint.com
+      |  
+      |           
+      |             
+      .column.spine
+        .spine-wrapper
+          svg#spine-logo(viewbox='0 0 30 10')
+            g
+              use(xlink:href='#BG-single', x='0', y='0')
+          |               
+          .subject
+            | #{$.subject}
+          |                 
+          .spine-title
+            | !{$.booktitle}
+      |             
       .column.page.cover
         svg#cover-logo(viewbox='0 0 30 10')
           g
