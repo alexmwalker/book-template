@@ -1,11 +1,11 @@
 ---
 template: cover-spread.pug
-booktitle: '<span>Performance</span> Tools'
-booktitleClean: 'Performance Tools'
+booktitle: '<span>Performance</span> Tool'
+booktitleClean: 'Performance Tool'
 tagline: 'Because Every Bottleneck Costs You <em>Real<em> Money'
-backpitch: 'It’s Just About Removing The Speed Humps For Your Users'
+backpitch: 'What Happens When You Remove Speed Humps For Your Users?'
 author: ''
-subject: 'Blowjobs'
+subject: 'Performance'
 category: 'Web Development'
 
 
