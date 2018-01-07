@@ -1,0 +1,243 @@
+img {
+  max-width: none;
+}
+
+/*
+ $aspect-ratio is either 7:9 (.76) or 8:10 (.8) ratio for all SitePoint books and shouldn't change unless the book format changes. */
+/* -- Spin speed -- */
+/* -- Preset Book Display Sizes -- */
+/* WIDTHS  */
+/* HEIGHTS  */
+/* SPINES  */
+/* CHUNKY SPINES */
+/* Calculate other book dimensions */
+.book.size-small {
+  height: 150px;
+  width: 120px;
+  -webkit-perspective: 525px;
+          perspective: 525px;
+  -webkit-transform: perspective(525px);
+          transform: perspective(525px);
+}
+.book.size-small .backcover {
+  -webkit-transform: perspective(525px) rotateY(180deg) translateZ(9px);
+          transform: perspective(525px) rotateY(180deg) translateZ(9px);
+}
+.book.size-small .backcover:before, .book.size-small .backcover:after {
+  width: 9px;
+}
+
+.book.size-mid {
+  height: 30vw;
+  width: 24vw;
+  -webkit-perspective: 105vw;
+          perspective: 105vw;
+  -webkit-transform: perspective(105vw);
+          transform: perspective(105vw);
+}
+.book.size-mid .backcover {
+  -webkit-transform: perspective(105vw) rotateY(180deg) translateZ(1.8vw);
+          transform: perspective(105vw) rotateY(180deg) translateZ(1.8vw);
+  outline: 3px dashed #f00;
+}
+.book.size-mid .backcover:before, .book.size-mid .backcover:after {
+  width: 1.8vw;
+}
+
+.book.size-large {
+  height: 35em;
+  width: 28em;
+  -webkit-perspective: 122.5em;
+          perspective: 122.5em;
+  -webkit-transform: perspective(122.5em);
+          transform: perspective(122.5em);
+}
+.book.size-large .backcover {
+  -webkit-transform: perspective(122.5em) rotateY(180deg) translateZ(2.1em);
+          transform: perspective(122.5em) rotateY(180deg) translateZ(2.1em);
+}
+.book.size-large .backcover:before, .book.size-large .backcover:after {
+  width: 2.1em;
+}
+
+.book {
+  margin: 2em;
+  position: relative;
+}
+
+.cover {
+  /* This is a mask to crop the IMG to only cover */
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15), 3px 3px 4px rgba(0, 0, 0, 0.3), 6px 6px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15), 3px 3px 4px rgba(0, 0, 0, 0.3), 6px 6px 4px rgba(0, 0, 0, 0.1);
+}
+.cover:after {
+  /* the reflection effect overlayed across the main IMG cover */
+  display: block;
+  content: '';
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  background-image: -webkit-linear-gradient(350deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0.25) 50%, rgba(255, 255, 255, 0) 100%), none;
+  background-image: -o-linear-gradient(350deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0.25) 50%, rgba(255, 255, 255, 0) 100%), none;
+  background-image: linear-gradient(100deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0.25) 50%, rgba(255, 255, 255, 0) 100%), none;
+  background-size: auto 270%;
+  background-position: 180% 100%;
+  background-repeat: repeat;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 12;
+}
+
+.view3d .cover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  /* remove anchoring shadow in 3D view */
+}
+
+.cover img {
+  float: right;
+  height: 100%;
+}
+
+.view3d .bookgroup {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: perspective(122.5em) rotateY(0deg) rotateX(0deg);
+          transform: perspective(122.5em) rotateY(0deg) rotateX(0deg);
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.view3d .bookgroup:before, .view3d .bookgroup:after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  background: #eee;
+  top: 0%;
+  -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  width: 100%;
+  height: 6%;
+  -webkit-transform: perspective(122.5em) rotateY(0deg) rotateX(-90deg) translateX(0px);
+          transform: perspective(122.5em) rotateY(0deg) rotateX(-90deg) translateX(0px);
+}
+.view3d .bookgroup:after {
+  top: 100%;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75), 2px 2px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75), 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.backcover {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  background: red, red;
+  background-size: 500% 200%, auto 100%;
+  background-position: -200% 100%, left top;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+  right: 0px;
+}
+.backcover:before, .backcover:after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #eee;
+  height: 100%;
+  -webkit-transform: perspective(122.5em) rotateY(90deg);
+          transform: perspective(122.5em) rotateY(90deg);
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  z-index: 9;
+}
+.backcover:after {
+  -webkit-transform: perspective(122.5em) rotateY(90deg) translateZ(0px);
+          transform: perspective(122.5em) rotateY(90deg) translateZ(0px);
+  left: 100%;
+  background-size: 500% 200%, auto 100%;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  background: inherit;
+  background-position: center center;
+}
+
+/* =======  POSING CLASSES ========== */
+.oclock-12 .bookgroup {
+  -webkit-transform: rotateY(0deg) rotateX(0deg);
+          transform: rotateY(0deg) rotateX(0deg);
+}
+
+.oclock-1 .bookgroup {
+  -webkit-transform: rotateY(-30deg) rotateX(0deg);
+          transform: rotateY(-30deg) rotateX(0deg);
+}
+
+.oclock-2 .bookgroup {
+  -webkit-transform: rotateY(-60deg) rotateX(0deg);
+          transform: rotateY(-60deg) rotateX(0deg);
+}
+
+.oclock-3 .bookgroup {
+  -webkit-transform: rotateY(-90deg) rotateX(0deg);
+          transform: rotateY(-90deg) rotateX(0deg);
+}
+
+.oclock-4 .bookgroup {
+  -webkit-transform: rotateY(-120deg) rotateX(0deg);
+          transform: rotateY(-120deg) rotateX(0deg);
+}
+
+.oclock-5 .bookgroup {
+  -webkit-transform: rotateY(-150deg) rotateX(0deg);
+          transform: rotateY(-150deg) rotateX(0deg);
+}
+
+.oclock-6 .bookgroup {
+  -webkit-transform: rotateY(-180deg) rotateX(0deg);
+          transform: rotateY(-180deg) rotateX(0deg);
+}
+
+.oclock-7 .bookgroup {
+  -webkit-transform: rotateY(-210deg) rotateX(0deg);
+          transform: rotateY(-210deg) rotateX(0deg);
+}
+
+.oclock-8 .bookgroup {
+  -webkit-transform: rotateY(-240deg) rotateX(0deg);
+          transform: rotateY(-240deg) rotateX(0deg);
+}
+
+.oclock-9 .bookgroup {
+  -webkit-transform: rotateY(-263deg) rotateX(0deg);
+          transform: rotateY(-263deg) rotateX(0deg);
+}
+
+.oclock-10 .bookgroup {
+  -webkit-transform: rotateY(-300deg) rotateX(0deg);
+          transform: rotateY(-300deg) rotateX(0deg);
+}
+
+.oclock-11 .bookgroup {
+  -webkit-transform: perspective(122.5em) rotateY(-330deg) rotateX(0deg);
+          transform: perspective(122.5em) rotateY(-330deg) rotateX(0deg);
+}
