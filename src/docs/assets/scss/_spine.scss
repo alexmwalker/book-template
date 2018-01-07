@@ -5,7 +5,9 @@
   left:0;
   line-height: $spine-width;
   margin: -1.5rem 0;
+  -webkit-transform-origin: bottom left;
   transform-origin: bottom left;
+  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   z-index: 999;
   #spine-logo{
