@@ -2,28 +2,28 @@ doctype html(lang='en')
 head
   meta(charset='utf-8')
   |   
-  title #{$.booktitleClean}
+  title #{markade.booktitleClean}
   |   
   meta(name='author', content='SitePoint')
   |   
-  meta(name="description", content=$.booktitleClean)
+  meta(name="description", content="#{markade.booktitleClean}")
   |
   link(rel='stylesheet', href='../assets/css/cover.css')
   style.
       html {
-        color: #{$.textcolorlight};
+        color: #{markade.textcolorlight};
         }
       .container .row .page,
       .container .row .spine {
-        background-color:  #{$.colorkey};
+        background-color:  #{markade.colorkey};
         }
       #hero {
-        background-image: url(#{$.illustration});
+        background-image: url(#{markade.illustration});
         }
       .backpitch, 
       .spine-wrapper .subject,
       .author-box h4 {
-        background: #{$.colorsecondary};
+        background: #{markade.colorsecondary};
 
   // SVG Start: logo symbol
   svg(width='0', height='0', style='display: none')
@@ -60,7 +60,7 @@ body
         .toptag
           | Supporting files available for Download
         .backpitch
-          | !{$.backpitch}
+          | !{markade.backpitch}
         .backtext !{html}
           |                 
           img(src='../images/SVG/map.svg', )
@@ -71,8 +71,7 @@ body
           .author-profile
             img(src='../images/crew.jpg', alt='The Crew')
           p
-            | Each SitePoint Anthology is a carefully curated collection of the best SitePoint writing around a chosen topic. That means you can be sure each chapter industry relevant, up-to-date and written by a world expert in their field.
-          p We know you&rsquo;ll enjoy every page.
+            | #{markade.authorPitch}
         .infobox
           .points
             h4 SitePoint Books
@@ -99,7 +98,7 @@ body
                 strong fun
           |                 
           .bookID
-            h5 Web Development
+            h5 #{markade.category}
             |                     
             .barcode
               // no barcode here
@@ -121,10 +120,10 @@ body
               use(xlink:href='#BG-single', x='0', y='0')
           |               
           .subject
-            | #{$.subject}
+            | #{markade.subject}
           |                 
           .spine-title
-            | !{$.booktitle}
+            | #{markade.booktitleClean}
       |             
       .column.page.cover
         svg#cover-logo(viewbox='0 0 30 10')
@@ -132,9 +131,9 @@ body
             use(xlink:href='#BG-single', x='0', y='0')
         |             &#x9;
         h1.title
-          | !{$.booktitle}
+          | !{markade.booktitle}
         |                            
         #hero
         |    
         .tagline
-          | !{$.tagline}
+          | !{markade.tagline}

@@ -1,0 +1,248 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Assets-Catalog (BS 4)
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(rel="stylesheet" href="../assets/css/user.css")
+    link(rel="stylesheet" href="../assets/css/3d.css")
+    style.
+      .container-fluid{
+        max-width: 90rem;
+      }
+      .chip{
+      display: inline-block ;
+      height: 1em;
+      width: 1em;
+      margin: 0 .25em;
+      border:1px #eee solid;
+      }
+      .colorkey{
+      background:#{markade.colorkey};
+      }
+      .colorsecondary{
+      background:#{markade.colorsecondary};
+      }
+      .textcolorlight{
+      background:#{markade.textcolorlight};
+      }
+      .textcolordark{
+      background:#{markade.textcolordark};
+      }
+  body
+    .container-fluid
+      nav.navbar.navbar-light.navbar-expand-md
+        .container-fluid
+          a.navbar-brand(href="#") Bookcode: #{markade.name}
+          button.navbar-toggler(data-toggle="collapse" data-target="#navcol-1")
+            span.sr-only Toggle navigation
+            span.navbar-toggler-icon
+          #navcol-1.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li.nav-item(role="presentation")
+                a.nav-link(href="#single") Front Cover
+              li.nav-item(role="presentation")
+                a.nav-link(href="#full") Full Cover
+              li.nav-item(role="presentation")
+                a.nav-link(href="#3drender") 3D Renders
+    .container-fluid
+      .row.product
+        .col-md-5
+          img.img-fluid.colorkey(style="padding: 1em", src=`${markade.illustration}`)
+        .col-md-7
+          h2 Title: #{markade.booktitleClean}
+          table
+            tr
+              td Key Color:
+              td 
+                span.chip.colorkey 
+                span #{markade.colorkey}
+            tr
+              td Secondary Color:
+              td  
+                span.chip.colorsecondary 
+                span #{markade.colorsecondary}    
+            tr
+              td Text Color (dark):
+              td  
+                span.chip.textcolordark 
+                span #{markade.textcolordark}
+            tr
+              td Text Color (light): 
+              td  
+                span.chip.textcolorlight 
+                span #{markade.textcolorlight}
+            tr
+              td Subject:
+              td #{markade.subject}
+            tr
+              td Illustration:
+              td 
+                a(href=`${markade.illustration}` alt="cover illustration") hero2.svg
+          p
+            em Short Blurb:
+          p !{html}
+      .row
+        .col
+          hr
+      div
+        h2 Front Covers
+      p
+        | These covers are set up for 10' x 8' templates. Note that we use a live HTML version of the cover on the eBook and PDF versions. These are produced in the build process and can be edited via the cover.md and coverspread.md files.
+      .row
+        .col-4
+          img.mr-3(src="../output/renders/img/cover-single.png" style="width:100%")
+        .col
+          h5 SVG 
+          ul
+            li
+              a(href="#") cover.svg 
+          h5 JPG 
+          ul
+            li
+              a(href="#") cover-1750px.jpg 
+              |  (hi-res)
+            li
+              a(href="#") cover-750px.jpg 
+              |  (medium)
+            li
+              a(href="#") cover-100px.jpg 
+              |  (thumb)
+        .col
+          h5 HTML 
+          ul
+            li
+              a(target="_blank" href="http://127.0.0.1:5500/book-template/src/docs/html/cover.html") cover.html
+          h5 PNG 
+          ul
+            li
+              a(href="#") cover-1750px.png 
+              |  (hi-res)
+            li
+              a(href="#") cover-750px.png 
+              |  (medium)
+            li
+              a(href="#") cover-100px.png 
+              |  (thumb)
+      div
+        .row
+          .col
+            hr
+        h2 Full Covers (Spreads)
+        p
+          | These complete wrap-around cover sheets are 
+          em primarily
+          |  produced for use in 3D cover renderings (see below). In the event they are needed to be used in a genuine print job, the PDF version would need to be re-fitted into the template
+        .row
+          .col-4
+            img.mr-3(src="../output/renders/img/cover-spread.png" style="width:100%")
+          .col
+            h5 SVG 
+            ul
+              li
+                a(href="#") cover.svg 
+            h5 JPG 
+            ul
+              li
+                a(href="#") cover-1750px.jpg 
+                |  (hi-res)
+              li
+                a(href="#") cover-750px.jpg 
+                |  (medium)
+              li
+                a(href="#") cover-100px.jpg 
+                |  (thumb)
+          .col
+            h5 HTML 
+            ul
+              li
+                a(target="_blank" href="http://127.0.0.1:5500/book-template/src/docs/html/cover-spread.html") cover-spread.html
+            h5 PNG 
+            ul
+              li
+                a(href="#") cover-1750px.png 
+                |  (hi-res)
+              li
+                a(href="#") cover-750px.png 
+                |  (medium)
+              li
+                a(href="#") cover-100px.png 
+                |  (thumb)
+            h5 PDF 
+            ul
+              li
+                a(target="_blank" href="../output/renders/img/cover-spread.pdf") cover-PDF 
+                |  (hi-res)
+        .row
+          .col
+            hr
+        h2 Static 3D Renderings
+        .intro
+        p
+          | These 3d renderings are produced by using CSS to wrap the full cover graphic produced above around a 3D shape. We're using PhantomJS to turn that HTML render into a set of flat PNGs. The 'camera angles' and aspects we choose are arbitary and
+          | there's nothing stopping us from 'posing' the book at any angle.
+        .row
+          .col-4
+            img.mr-3(src="img/cover-spread.jpg" style="width:300;height:200px;")
+          .col
+            h5 JPG 
+            ul
+              li
+                a(href="#") cover-1750px.jpg 
+                |  (hi-res)
+              li
+                a(href="#") cover-750px.jpg 
+                |  (medium)
+              li
+                a(href="#") cover-100px.jpg 
+                |  (thumb)
+          .col
+            h5 PNG 
+            ul
+              li
+                a(href="#") cover-1750px.png 
+                |  (hi-res)
+              li
+                a(href="#") cover-750px.png 
+                |  (medium)
+              li
+                a(href="#") cover-100px.png 
+                |  (thumb)
+        .media
+          .media-body
+    .container-fluid
+      .row
+        .col
+          .row
+            .col
+              hr
+          h2 Live 3D Models (HTML &amp; CSS)
+          p
+            | Here is the actual 3d model we're using to render the flat graphics above. This can be deployed to any web page fairly easily any allows us to rotate, zoom and reposition the 'book' as a live 3d object in the page. It requires a specific
+            | markup, some CSS and a short script attachment.
+          .row
+            .col
+              .book.view3d.size-large.oclock-11.chunky
+                .bookgroup
+                  .backcover(style="background-image: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 25%, rgba(0,0,0,0.25) 50%, rgba(255,255,255,0) 100%), url(https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/react1/react-tools.png)")
+                  .cover
+                    img(src="../output/renders/img/cover-spread.png" alt= `${markade.booktitleClean}`)
+
+    footer.site-footer
+      .container-fluid
+        hr
+        .row
+          .col-sm-6
+            h5 SitePoint © 2017
+          .col-sm-6.social-icons
+            a(href="#")
+              i.fa.fa-facebook
+            a(href="#")
+              i.fa.fa-twitter
+            a(href="#")
+              i.fa.fa-instagram
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/js/bootstrap.min.js")
+    //- script(src="https://cdn.rawgit.com/alexmwalker/view3d/master/js/scripts.js")

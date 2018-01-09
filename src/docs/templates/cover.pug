@@ -2,26 +2,26 @@ doctype html(lang='en')
 head
   meta(charset='utf-8')
   |   
-  title #{$.booktitleClean}
+  title #{markade.booktitleClean}
   |   
   meta(name='author', content='SitePoint')
   |   
   link(rel='stylesheet', href='../assets/css/cover.css')
   style.
       html {
-        color: #{$.textcolorlight};
+        color: #{markade.textcolorlight};
         }
       .container .row .page,
       .container .row .spine {
-        background-color:  #{$.colorkey};
+        background-color:  #{markade.colorkey};
         }
       #hero {
-        background-image: url(#{$.illustration});
+        background-image: url(#{markade.illustration});
         }
       .backpitch, 
       .spine-wrapper .subject,
       .author-box h4 {
-        background: #{$.colorsecondary};
+        background: #{markade.colorsecondary};
 
   // SVG Start: logo symbol
   svg(width='0', height='0', style='display: none')
@@ -60,9 +60,9 @@ body
             use(xlink:href='#BG-single', x='0', y='0')
         |             &#x9;
         h1.title
-          | !{$.booktitle}
+          | !{markade.booktitle}
         |                            
         #hero
         |    
         .tagline
-          | !{$.tagline}
+          | !{markade.tagline}

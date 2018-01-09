@@ -2,18 +2,7 @@
 template: cover-spread.pug
 booktitle: '<span>Performance</span> Tools'
 booktitleClean: 'Performance Tools'
-tagline: 'Because Every Bottleneck Costs You <em>Real<em> Money'
-backpitch: 'What Happens When You Remove Speed Humps For Your Users?'
-author: ''
-subject: 'Performance'
-category: 'Web Development'
 
-
-colorkey: 'rgb(53, 200, 168)'
-colorsecondary: '#222244'
-textcolorlight: '#fff'
-textcolordark: '#222244'
-illustration: '../images/SVG/hero2.svg'
 ---
 
 
