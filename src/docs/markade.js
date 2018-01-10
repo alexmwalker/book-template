@@ -9,7 +9,7 @@ module.exports = {
   "authorPitch": "Each SitePoint Anthology is a carefully curated collection of the best SitePoint writing around a chosen topic. That means you can be sure each chapter industry relevant, up-to-date and written by a world expert in their field. We know you'll enjoy every page.",
   "subject": 'Performance',
   "category": 'Web Development',
-  "colorkey": 'rgb(68, 206, 153)',
+  "colorkey": '#3EC7A8',
   "colorsecondary": '#222244',
   "textcolorlight": '#fff',
   "textcolordark": '#222244',

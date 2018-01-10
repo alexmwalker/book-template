@@ -21,11 +21,11 @@ img{ /* some CSS resets set this to 100% - we don't want that here*/
 
 $aspect-ratio:       7/9.15;
 $aspect-ratio:       8/10;
-$spine-ratio:        0.06; /* standard width book spines*/
-$spine-ratio-chunky: 0.08;  /* for books with fatter spines*/
-$book-perspective:   3.5;  /* Lower numbers make appearance more warped by perspective. */
+$spine-ratio:        0.1; /* standard width book spines*/
+$spine-ratio-chunky: 0.18;  /* for books with fatter spines*/
+$book-perspective:   5.5;  /* Lower numbers make appearance more warped by perspective. */
 
-$perspective: $book-perspective;
+
 
 /* -- Spin speed -- */
 
@@ -138,8 +138,8 @@ $perspective: $book-perspective * $height-large;
     width: 100%;
     opacity: 1;
     background-image: $lighting-effect, none;
-    background-size: 500% 200%, auto 100%;  
-    background-position: 80% 100%, center top ; 
+    background-size: auto 200%;
+    background-position: center top;
     background-repeat: repeat;
     top: 0;
     left: 0;
@@ -166,8 +166,8 @@ $perspective: $book-perspective * $height-large;
   -webkit-transform-origin: 50% 50%;
       -ms-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-  -webkit-transform: rotateY(0deg) rotateX(0deg);
-          transform: rotateY(0deg) rotateX(0deg); /*default view*/
+  -webkit-transform: perspective($perspective) rotateY(0deg) rotateX(0deg);
+          transform: perspective($perspective) rotateY(0deg) rotateX(0deg); /*default view*/
   height: 100%;
   width: 100%;
   position: relative;
@@ -221,7 +221,7 @@ $perspective: $book-perspective * $height-large;
   }
   &:after { //spine 
     -webkit-transform: perspective($perspective) rotateY(90deg) translateZ(0px);
-            transform: perspective($perspective) rotateY(90deg) translateZ(0px);
+            transform: perspective($perspective) rotateY(90deg) translateZ(0px) scale(1.01);
     left: 100%;
     background-size: 500% 200%, auto 100%;
     -webkit-transform-origin: (0% 50%);
@@ -255,44 +255,44 @@ $perspective: $book-perspective * $height-large;
 //+----------------------+ */
 
 .oclock-12 .bookgroup {
-  -webkit-transform: rotateY(0deg) rotateX(0deg);
-          transform: rotateY(0deg) rotateX(0deg); /*default view*/
+  -webkit-transform: perspective($perspective) rotateY(0deg) rotateX(0deg);
+          transform: perspective($perspective) rotateY(0deg) rotateX(0deg); /*default view*/
 }
 .oclock-1 .bookgroup {
-  -webkit-transform: rotateY(-30deg) rotateX(0deg);
-          transform: rotateY(-30deg) rotateX(0deg); 
+  -webkit-transform: perspective($perspective) rotateY(-30deg) rotateX(0deg);
+          transform: perspective($perspective) rotateY(-30deg) rotateX(0deg); 
 }
 .oclock-2 .bookgroup {
-  -webkit-transform: rotateY(-60deg) rotateX(0deg);
-          transform: rotateY(-60deg) rotateX(0deg); 
+  -webkit-transform: perspective($perspective) rotateY(-60deg) rotateX(0deg);
+          transform: perspective($perspective) rotateY(-60deg) rotateX(0deg); 
 }
 .oclock-3 .bookgroup {
-  -webkit-transform: rotateY(-90deg) rotateX(0deg);
-          transform: rotateY(-90deg) rotateX(0deg); 
+  -webkit-transform: perspective($perspective) rotateY(-90deg) rotateX(0deg);
+          transform: perspective($perspective) rotateY(-90deg) rotateX(0deg); 
 }
 .oclock-4 .bookgroup {
-  -webkit-transform: rotateY(-120deg) rotateX(0deg);
-          transform: rotateY(-120deg) rotateX(0deg); 
+  -webkit-transform: perspective($perspective) rotateY(-120deg) rotateX(0deg);
+          transform: perspective($perspective) rotateY(-120deg) rotateX(0deg); 
 }
 .oclock-5 .bookgroup {
-  -webkit-transform: rotateY(-150deg) rotateX(0deg);
-          transform: rotateY(-150deg) rotateX(0deg); 
+  -webkit-transform: perspective($perspective) rotateY(-150deg) rotateX(0deg);
+          transform: perspective($perspective) rotateY(-150deg) rotateX(0deg); 
 }
 .oclock-6 .bookgroup {
-  -webkit-transform: rotateY(-180deg) rotateX(0deg);
-          transform: rotateY(-180deg) rotateX(0deg); /*reverse side*/
+  -webkit-transform: perspective($perspective) rotateY(-180deg) rotateX(0deg);
+          transform: perspective($perspective) rotateY(-180deg) rotateX(0deg); /*reverse side*/
 }
 .oclock-7 .bookgroup {
-  -webkit-transform: rotateY(-210deg) rotateX(0deg);
-          transform: rotateY(-210deg) rotateX(0deg); 
+  -webkit-transform: perspective($perspective) rotateY(-210deg) rotateX(0deg);
+          transform: perspective($perspective) rotateY(-210deg) rotateX(0deg); 
 }
 .oclock-8 .bookgroup {
-  -webkit-transform: rotateY(-240deg) rotateX(0deg);
-          transform: rotateY(-240deg) rotateX(0deg); 
+  -webkit-transform: perspective($perspective) rotateY(-240deg) rotateX(0deg);
+          transform: perspective($perspective) rotateY(-240deg) rotateX(0deg); 
 }
 .oclock-9 .bookgroup {
-  -webkit-transform: rotateY(-270deg) rotateX(0deg);
-          transform: rotateY(-270deg) rotateX(0deg); 
+  -webkit-transform: perspective($perspective) rotateY(-270deg) rotateX(0deg);
+          transform: perspective($perspective) rotateY(-270deg) rotateX(0deg); 
 }
 .oclock-10 .bookgroup {
   -webkit-transform: perspective($perspective) rotateY(-300deg) rotateX(0deg);

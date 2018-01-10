@@ -82,9 +82,10 @@ html
               td 
                 a(href=`${markade.illustration}` alt="cover illustration") #{markade.illustration}
           p
-            br
-            em Short Blurb:
-          p !{html}
+            br 
+            | Short Blurb (from Sales page intro):
+          p 
+            em !{html} 
       .row
         .col
           hr
@@ -226,10 +227,8 @@ html
           .row
             .col
               .book.view3d.size-large.oclock-11.chunky
-                .bookgroup
-                  .backcover(style="background-image: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 25%, rgba(0,0,0,0.25) 50%, rgba(255,255,255,0) 100%), url(https://raw.githubusercontent.com/alexmwalker/Complete-Cover-Archive/master/react1/react-tools.png)")
-                  .cover
-                    img(src="../output/renders/img/cover-spread.png" alt= `${markade.booktitleClean}`)
+                .cover
+                  img(src="../output/renders/img/cover-spread.png" alt= `${markade.booktitleClean}`)
 
     footer.site-footer
       .container-fluid
@@ -246,4 +245,4 @@ html
               i.fa.fa-instagram
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/js/bootstrap.min.js")
-    //- script(src="https://cdn.rawgit.com/alexmwalker/view3d/master/js/scripts.js")
+    script(src="https://cdn.rawgit.com/alexmwalker/view3d/master/js/scripts.js")
