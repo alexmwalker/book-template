@@ -2,7 +2,7 @@
 $base-font-size: 18px;
 $base-line-height: $base-font-size * 1.5;
 
-
+/* these defaults are overridden in each individual cover head <style>*/
 $color-key: rgb(68, 206, 153);
 $color-secondary: #222244;
 $text-color-light: #fff;
@@ -45,7 +45,7 @@ html{
 }
 body{
   margin: 0;
-  width: 21in;
+  //width: 21in;
 }
 .container {
     margin: 0 ;
@@ -55,12 +55,18 @@ body{
     float: left;
 }
 #bookcover{
-  width: $artboard;
-  //outline: 1px red dashed;
+  width: $page-width;
+  outline: 1px red dashed;
   overflow: hidden;
   top: 0;
   left: 0;
-  //transform: scale(.7);
+}
+#bookcoverSpread{
+  width: $artboard;
+  outline: 1px yellow dashed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
 }
 .row {
 
