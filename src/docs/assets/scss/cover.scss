@@ -3,7 +3,7 @@ $base-font-size: 18px;
 $base-line-height: $base-font-size * 1.5;
 
 
-$color-key: rgb(168, 206, 53);
+$color-key: rgb(68, 206, 153);
 $color-secondary: #222244;
 $text-color-light: #fff;
 $text-color-dark: #222244;
@@ -12,7 +12,7 @@ $text-color-dark: #222244;
 
 $page-width: 42.65rem;
 $page-height: $page-width*10/8;
-$spine-width: $page-width/20;
+$spine-width: $page-width/20; // roughly 1mm for every 10 pages
 $artboard: ($page-width * 2) + $spine-width;
 
 @page {

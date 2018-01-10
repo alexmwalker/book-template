@@ -1,7 +1,5 @@
 ---
 template: assets.pug
-booktitle: '<span>Performance</span> Tools'
-booktitleClean: 'Performance Tools'
 
 ---
 
