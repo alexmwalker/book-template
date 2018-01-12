@@ -95,28 +95,29 @@ html
         | These covers are set up for 10' x 8' templates. Note that we use a live HTML version of the cover on the eBook and PDF versions. These are produced in the build process and can be edited via the cover.md and coverspread.md files.
       .row
         .col-4
-          img.mr-3(src="../output/renders/img/cover-single.png" style="width:100%")
+          img.mr-3(src="../output/renders/covers/cover_cover-767x959.jpg" style="width:100%")
         .col
-          h5 SVG 
-          ul
+          // h5 SVG 
+          // ul
             li
               a(href="#") cover.svg 
           h5 JPG 
           ul
+            //-li
+            //-  a(href="#") cover-1750px.jpg 
+            //-  |  (hi-res)
             li
-              a(href="#") cover-1750px.jpg 
-              |  (hi-res)
-            li
-              a(href="#") cover-750px.jpg 
+              a(href="../output/renders/covers/cover_cover-767x959.jpg") cover_cover-767x959.jpg 
               |  (medium)
-            li
-              a(href="#") cover-100px.jpg 
-              |  (thumb)
+            //-li
+            //-  a(href="#") cover-100px.jpg 
+            //-  |  (thumb)
         .col
           h5 HTML 
           ul
             li
-              a(target="_blank" href="http://127.0.0.1:5500/book-template/src/docs/html/cover.html") cover.html
+              a(target="_blank" href="http://127.0.0.1:5500/book-template/src/docs/html/cover-767x959.html") cover-767x959.html
+        //
           h5 PNG 
           ul
             li
@@ -139,28 +140,29 @@ html
           |  produced for use in 3D cover renderings (see below). In the event they are needed to be used in a genuine print job, the PDF version would need to be re-fitted into the template
         .row
           .col-4
-            img.mr-3(src="../output/renders/img/cover-spread.png" style="width:100%")
+            img.mr-3(src="../output/renders/covers/cover_cover-spread-1573x959.jpg" style="width:100%")
           .col
-            h5 SVG 
-            ul
+            // h5 SVG 
+            // ul
               li
                 a(href="#") cover.svg 
             h5 JPG 
             ul
-              li
+              //-li
                 a(href="#") cover-1750px.jpg 
                 |  (hi-res)
               li
-                a(href="#") cover-750px.jpg 
+                a(href="./output/renders/covers/cover_cover-spread-1573x959.jpg") cover_cover-spread-1573x959.jpg 
                 |  (medium)
-              li
+              //-li
                 a(href="#") cover-100px.jpg 
                 |  (thumb)
           .col
             h5 HTML 
             ul
               li
-                a(target="_blank" href="http://127.0.0.1:5500/book-template/src/docs/html/cover-spread.html") cover-spread.html
+                a(target="_blank" href="http://127.0.0.1:5500/book-template/src/docs/html/cover-spread-1573x959.html") cover-spread-1573x959.html
+          //  
             h5 PNG 
             ul
               li
@@ -180,6 +182,7 @@ html
         .row
           .col
             hr
+      //-
         h2 Static 3D Renderings
         .intro
         p
@@ -228,7 +231,7 @@ html
             .col
               .book.view3d.size-large.oclock-11.chunky
                 .cover
-                  img(src="../output/renders/img/cover-spread.png" alt= `${markade.booktitleClean}`)
+                  img(src="../output/renders/covers/cover_cover-spread-1573x959.jpg" alt= `${markade.booktitleClean}`)
 
     footer.site-footer
       .container-fluid

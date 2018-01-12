@@ -2,11 +2,11 @@ doctype html(lang='en')
 head
   meta(charset='utf-8')
   |   
-  title #{markade.booktitleClean}
+  title #{markade.name}
   |   
   meta(name='author', content='SitePoint')
   |   
-  meta(name="description", content="#{markade.booktitleClean}")
+  meta(name="description", content=`${markade.booktitleClean}`)
   |
   link(rel='stylesheet', href='../assets/css/cover.css')
   style.
