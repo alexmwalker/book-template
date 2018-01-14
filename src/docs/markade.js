@@ -1,7 +1,7 @@
 module.exports = {
   "name": "perf4",
-  "booktitle": '<span>Performance</span> Woody',
-  "booktitleClean": 'Performance Woody',
+  "booktitle": '<span>Performance</span> Asshats',
+  "booktitleClean": 'Performance Asshats',
   "tagline": 'Because Every Bottleneck Costs You <em>Real</em> Money',
   "backpitch": 'What Happens When You Remove Speed Humps For Your Users?',
   "pagenumbers": '150',
@@ -9,7 +9,7 @@ module.exports = {
   "authorPitch": "Each SitePoint Anthology is a carefully curated collection of the best SitePoint writing around a chosen topic. That means you can be sure each chapter industry relevant, up-to-date and written by a world expert in their field. We know you'll enjoy every page.",
   "subject": 'Performance',
   "category": 'Web Development',
-  "colorkey": '#C7A83E',
+  "colorkey": '#ffA833',
   "colorsecondary": '#222244',
   "textcolorlight": '#fff',
   "textcolordark": '#222244',
