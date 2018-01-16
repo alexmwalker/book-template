@@ -7,9 +7,9 @@ var PAGE_WIDTH = 0;
 var PAGE_HEIGHT = 0;
 
 var URLS = [
-  "http://127.0.0.1:5500/book-template/src/docs/html/cover-767x959.html",
-  "http://127.0.0.1:5500/book-template/src/docs/html/cover-spread-1573x959.html"//,
-  //"http://127.0.0.1:5500/book-template/src/docs/output/renders/covers/cover-small.html"
+  "http://127.0.0.1:5500/book-template/src/docs/html/cover.html",
+  "http://127.0.0.1:5500/book-template/src/docs/html/cover-spread.html",
+  "http://127.0.0.1:5500/book-template/src/docs/html/cover-spread.html?h=500"
 ];
 
 
@@ -48,10 +48,10 @@ page.onLoadStarted = function() {
 page.onLoadFinished = function() {
   loadInProgress = false;
   myURL = URLS[pageIndex].split("/");
-  myfilename = myURL[myURL.length-1].split(".");
+  myfilename = myURL[myURL.length-1].split("."); // isolate the HTML filename as a title for the image
   console.log(myfilename[0]);
   //page.render("covers/cover" + (pageIndex + 1) + "_" + PAGE_WIDTH + "x" + PAGE_HEIGHT + ".jpg");
-  page.render("covers/cover_" + myfilename[0] + ".jpg");
+  page.render("covers/cover_" + (pageIndex + 1) + "_" + myfilename[0] + ".jpg");
   console.log('page ' + (pageIndex + 1) + ' load finished');
   pageIndex++;
 };

@@ -95,7 +95,7 @@ html
         | These covers are set up for 10' x 8' templates. Note that we use a live HTML version of the cover on the eBook and PDF versions. These are produced in the build process and can be edited via the cover.md and coverspread.md files.
       .row
         .col-4
-          img.mr-3(src="../output/renders/covers/cover_cover-767x959.jpg" style="width:100%")
+          img.mr-3(src="../output/renders/covers/cover_1_cover.jpg" style="width:100%")
           small (JPG)
         .col
           // h5 SVG 
@@ -108,7 +108,7 @@ html
             //-  a(href="#") cover-1750px.jpg 
             //-  |  (hi-res)
             li
-              a(href="http://127.0.0.1:5500/book-template/src/docs/output/renders/covers/cover_cover-767x959.jpg") cover_cover-767x959.jpg 
+              a(href="http://127.0.0.1:5500/book-template/src/docs/output/renders/covers/cover_1_cover.jpg") cover_1_cover.jpg 
               |  (medium)
             //-li
             //-  a(href="#") cover-100px.jpg 
@@ -117,7 +117,7 @@ html
           h5 HTML 
           ul
             li
-              a(target="_blank" href="http://127.0.0.1:5500/book-template/src/docs/html/cover-767x959.html") cover-767x959.html
+              a(target="_blank" href="http://127.0.0.1:5500/book-template/src/docs/html/cover-767x959.html") cover_1_cover.html
         
           h5 PNG 
           ul
@@ -125,7 +125,7 @@ html
               a(href="#") cover-1750px.png 
               |  (hi-res)
             li
-              a(href="../output/renders/covers/cover_cover-767x959.png") cover_cover-767x959.png
+              a(href="../output/renders/covers/cover_1_cover.png") cover_1_cover.png
               |  (medium)
             // li
               a(href="#") cover-100px.png 
@@ -133,7 +133,7 @@ html
           h5 PDF 
           ul
             li
-              a(target="_blank" href="../output/renders/covers/cover_cover-767x959.pdf") cover_cover-767x959.pdf
+              a(target="_blank" href="../output/renders/covers/cover_1_cover.pdf") cover_1_cover.pdf
       div
         .row
           .col
@@ -145,7 +145,7 @@ html
               |  produced for use in 3D cover renderings (see below). In the event they are needed to be used in a genuine print job, the PDF version would need to be re-fitted into the template
         .row
           .col-4
-            img.mr-3(src="../output/renders/covers/cover_cover-spread-1573x959.jpg" style="width:100%")
+            img.mr-3(src="../output/renders/covers/cover_2_cover-spread.jpg" style="width:100%")
             small (JPG)
           .col
             // h5 SVG 
@@ -158,7 +158,7 @@ html
                 a(href="#") cover-1750px.jpg 
                 |  (hi-res)
               li
-                a(href="../output/renders/covers/cover_cover-spread-1573x959.jpg") cover_cover-spread-1573x959.jpg 
+                a(href="../output/renders/covers/cover_2_cover-spread.jpg") cover_2_cover-spread.jpg 
                 |  (medium)
               //-li
                 a(href="#") cover-100px.jpg 
@@ -167,7 +167,7 @@ html
             h5 HTML 
             ul
               li
-                a(target="_blank" href="http://127.0.0.1:5500/book-template/src/docs/html/cover-spread-1573x959.html") cover-spread-1573x959.html
+                a(target="_blank" href="http://127.0.0.1:5500/book-template/src/docs/html/cover-spread.html") cover-spread.html
             
             h5 PNG 
             ul
@@ -175,7 +175,7 @@ html
                 a(href="#") cover-1750px.png 
                 |  (hi-res)
               li
-                a(href="../output/renders/covers/cover_cover-spread-1573x959.png") cover_cover-spread-1573x959.png 
+                a(href="../output/renders/covers/cover_2_cover-spread") cover_2_cover-spread.png 
                 |  (medium)
               //li
                 a(href="#") cover-100px.png 
@@ -183,7 +183,7 @@ html
             h5 PDF 
             ul
               li
-                a(target="_blank" href="../output/renders/covers/cover_cover-spread-1573x959.pdf") cover_cover-spread-1573x959.pdf
+                a(target="_blank" href="../output/renders/covers/cover_cover-spread.pdf") cover_cover-spread.pdf
         .row
           .col
             hr
@@ -228,22 +228,25 @@ html
           .row
             .col
               hr
-          h2 Live 3D Models (HTML &amp; CSS)
+          h2 Live 3D Model (HTML &amp; CSS)
           p
-            | Here is the actual 3d model we're using to render the flat graphics above. This can be deployed to any web page fairly easily any allows us to rotate, zoom and reposition the 'book' as a live 3d object in the page. It requires a specific
-            | markup, some CSS and a short script attachment.
+            | Here is the actual 3d model we're using to render the flat 'cover-spread.jpg' graphics above. Export it to a flat graphic using 
+            a(href="https://www.figma.com/file/0Xob2a0PQQQcHBvDrlYnwmis/SitePoint-3D-Covers?node-id=14%3A7") Figma and this file.
           .row
             .col
               .book.view3d.size-large.oclock-11.chunky
                 .cover
-                  img(src="../output/renders/covers/cover_cover-spread-1573x959.jpg" alt= `${markade.booktitleClean}`)
+                  img(src="../output/renders/covers/cover_2_cover-spread.jpg" alt= `${markade.booktitleClean}`)
 
     footer.site-footer
       .container-fluid
         hr
         .row
           .col-sm-6
-            h5 SitePoint © 2017
+            h5
+              | SitePoint © 
+              script(type="text/javascript").
+                document.write(new Date().getFullYear());
           .col-sm-6.social-icons
             a(href="#")
               i.fa.fa-facebook

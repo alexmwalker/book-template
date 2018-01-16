@@ -7,8 +7,8 @@ var PAGE_WIDTH = 0;
 var PAGE_HEIGHT = 0;
 
 var URLS = [
-  "http://127.0.0.1:5500/book-template/src/docs/html/cover-767x959.html",
-  "http://127.0.0.1:5500/book-template/src/docs/html/cover-spread-1573x959.html"//,
+  "http://127.0.0.1:5500/book-template/src/docs/html/cover.html",
+  "http://127.0.0.1:5500/book-template/src/docs/html/cover-spread.html"
   //"http://127.0.0.1:5500/book-template/src/docs/output/renders/covers/cover-small.html"
 ];
 

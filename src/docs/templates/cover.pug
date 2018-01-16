@@ -11,6 +11,8 @@ html
     style.
         html {
           color: #{markade.textcolorlight};
+          /*font-size: 40px;
+          line-height: 60px; */
           }
         .container .row .page,
         .container .row .spine {
@@ -67,3 +69,12 @@ html
           |    
           .tagline
             | !{markade.tagline}
+  script.
+    /* ### Make Cover size settable via the URI #### */
+    // assuming URL="http://127.0.0.1:5500/book-template/src/docs/html/cover-767x959.html?h=1500" - 'height' (px) gets turned into font-size & line-height values on the HTML element
+    var urlParams = new URLSearchParams(window.location.search);
+    screenheight = urlParams.get('h'); // "height"
+    var screenheight = (screenheight === null) ? 959.6 : screenheight; // default if not explicitly set
+    var elem = document.querySelector("html");
+    elem.setAttribute("style", "font-size: " + Math.round(screenheight / 53.333) + "px; line-height: " + Math.round(screenheight / 35.555) +
+    "px;");
