@@ -68,11 +68,14 @@
 .infobox{
   background: #fff;
   clear: both;
-  position: relative;
+  position: absolute;
   margin: 1rem 2rem 0rem 2rem;
   padding: .75rem 0;
   overflow: hidden;
   color: $text-color-dark;
+  background: #fff;
+  bottom: 3rem;
+  width: 38.5rem;
 }
 .points, .bookID{
   width: 49%;
@@ -133,4 +136,9 @@
   font-size: .75rem;
   text-align: center;
   margin-top: 0;
+}
+.addendum{
+  position: absolute;
+  bottom: 1rem;
+  width: 85%;
 }
