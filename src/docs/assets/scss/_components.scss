@@ -81,14 +81,13 @@ section#cover{
 .box.codepen h4,
 .box.note h4,
 .box.attention h4,
-.box.warning h4 {
-    padding-left: 3rem;
-}
-
+.box.warning h4,
+.box.github h4,
 .box.tip .body,
 .box.note .body,
 .box.codepen .body,
 .box.attention .body,
+.box.github .body,
 .box.warning .body {
     padding-left: 3rem;
 }
@@ -117,7 +116,10 @@ section#cover{
     background: url(../images/box-codepen.svg);
     @include box-icon;
 }
-
+.box.github:before {
+    background: url(../images/box-github.svg);
+    @include box-icon;
+}
 
 figure{
     margin: 0;
